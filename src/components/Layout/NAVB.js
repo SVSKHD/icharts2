@@ -10,6 +10,7 @@ import {
   Container
 } from 'reactstrap';
 import {Link} from "react-router-dom"
+import ThemeToggler from '../ThemeToogler';
 
 
 const NAVB = (props) => {
@@ -25,7 +26,8 @@ const NAVB = (props) => {
         <NavbarBrand href="/">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          
+          <Nav className="me-auto" navbar>
             <NavItem>
               <NavLink tag={Link} to="/rapp/ivrivp">IVR</NavLink>
             </NavItem>
@@ -33,6 +35,11 @@ const NAVB = (props) => {
               <NavLink tag={Link} to="/rapp/futioscan" >FutioScan</NavLink>
             </NavItem>
           </Nav>
+       
+         <Nav className="ml-auto">
+         <ThemeToggler/>
+         </Nav>
+
         </Collapse>
         </Container>
       </Navbar>

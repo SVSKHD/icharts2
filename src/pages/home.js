@@ -1,10 +1,23 @@
+import {useContext} from "react"
 import { Link } from "react-router-dom"
 import {Button , ButtonGroup } from "reactstrap"
 import Layout from "../components/Layout/Layout"
 
+import ThemeContext from "../context/ThemeContext"
+import AppTheme from "../Colors"
+
+
 const Home = () =>{
-return(
-    <div>
+    const theme = useContext(ThemeContext)[0];
+    const currentTheme = AppTheme[theme];
+
+    return(
+    <div
+    style={{
+        backgroundColor:`${currentTheme.backgroundColor}`,
+        color:`${currentTheme.textColor}`
+    }}
+    >
         <Layout>
         <div className="text-center">
         <h1>Hello</h1>
