@@ -93,7 +93,6 @@ const IVP = () =>{
           const url = "https://options.icharts.in/opt/hcharts/stx8req/php/getDataForIVR_IVP_Report_BhavCopy_for_test.php"
           fetch(url).then(resp=>resp.json())
           .then(resp=>setData(resp.aaData))
-          console.log(data)
         },1000)
         },[])
 

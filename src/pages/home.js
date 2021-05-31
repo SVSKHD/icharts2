@@ -23,7 +23,7 @@ const Home = () =>{
         <h1>Hello</h1>
         <ButtonGroup>
                <Button tag={Link} to="/rapp/ivrivp">IVR tool</Button>
-               <Button tag={Link} to="/rapp/futioscan">Future scan</Button>
+               <Button tag={Link} to="/rapp/futoiscan">Future scan</Button>
         </ButtonGroup>
         </div>
         </Layout>

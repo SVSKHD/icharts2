@@ -13,7 +13,7 @@ import {Link} from "react-router-dom"
 import ThemeToggler from '../ThemeToogler';
 
 
-const NAVB = (props) => {
+const NAVB = ({NAVC}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -21,9 +21,9 @@ const NAVB = (props) => {
   return (
     <div>
      
-      <Navbar className="NAVB" color="info" dark expand="md">
+      <Navbar className="NAVB" color={NAVC} dark expand="md">
       <Container fluid>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">iCharts</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           
@@ -32,7 +32,7 @@ const NAVB = (props) => {
               <NavLink tag={Link} to="/rapp/ivrivp">IVR</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/rapp/futioscan" >FutioScan</NavLink>
+              <NavLink tag={Link} to="/rapp/futoiscan" >FutioScan</NavLink>
             </NavItem>
           </Nav>
        
@@ -43,7 +43,6 @@ const NAVB = (props) => {
         </Collapse>
         </Container>
       </Navbar>
-      {props.children}
 
      
       

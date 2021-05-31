@@ -12,18 +12,23 @@ import { useContext, useState } from "react"
 
 
 const Routing = () =>{
-    const themeHook = useState("light")
-    const theme = useContext(ThemeContext)
-    const currentTheme = AppTheme[themeHook]
+    const themeHook = useState("light");
+    const theme = useContext(ThemeContext)[0];
+    const currentTheme = AppTheme[theme];
     return(
     <div>
-        <ThemeContext.Provider value={theme}>
-        <div>
+        <ThemeContext.Provider value={themeHook}>
+        <div
+        style={{
+            backgroundColor:`${currentTheme. backgroundColor}`,
+            color:`${currentTheme.textColor}`
+        }}
+        >
         <Router>
             <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/rapp/ivrivp" component={IVP}/>
-            <Route exact path="/rapp/futioscan" component={IVR2}/>
+            <Route exact path="/rapp/futoiscan" component={IVR2}/>
             <Route exact path="*" component={NotFOund}/>
             </Switch>
         </Router>

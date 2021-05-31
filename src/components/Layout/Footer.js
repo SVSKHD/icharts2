@@ -1,9 +1,9 @@
 import {Card , CardBody } from "reactstrap"
 
-const Footer = () =>{
+const Footer = ({FC}) =>{
     return(
       <div>
-          <Card className="shadow-lg">
+          <Card color={FC} className="shadow-lg">
               <CardBody>
                   <h3 className="display-3">iCharts</h3>
               </CardBody>
