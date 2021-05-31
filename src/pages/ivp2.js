@@ -30,6 +30,7 @@ const IVR2 = () =>{
     const url ="https://options.icharts.in/opt/hcharts/stx8req/php/getDataForFuturesScan_for_react_test.php"
     fetch(url).then(resp=>resp.json())
     .then(resp=>setData(resp.aaData))
+    console.log(data)
     },[])
 
 

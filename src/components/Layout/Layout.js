@@ -15,9 +15,15 @@ const Layout = (props)=>{
            <NAVB
            NAVC={`${currentTheme.NAVCOLOR}`}
            />
+           <div
+           style={{
+               backgroundColor:`${currentTheme.backgroundColor}`
+           }}
+           >
            <br className="mb-5"/>
            {props.children}
            <br className="mb-5"/>
+           </div>
            <Footer
            FC={`${currentTheme.Boottheme}`}
            />
